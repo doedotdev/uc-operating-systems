@@ -1,28 +1,27 @@
-# opsys
-University of Cincinnati - Operating Systems
+HW 3
+Benjamin Horn
 
-## Problem 1 Usage
+Part 1 Usage --------------------------------------------
 
 g++ hw1.cpp -o part1
 ./part1 hornbd96@gmail.com
 
-## Problem 2 Usage
+Part 2 Usage --------------------------------------------
 
-compile the server `gcc -o server server.c`
-
-You start the server, it creates some share memory. `./server`
-
-compile the client `gcc -o client client.c`
-
+compile the server
+    gcc -o server server.c 
+You start the server, it creates some share memory.
+    ./server
+compile the client
+    gcc -o client client.c
 Create a file called called read.txt with some words in it.
 
-You start the client in another window, it reads from read.txt whatever is in there into shared memory. `./client read.txt`
-
+You start the client in another window, it reads from read.txt whatever is in there into shared memory.
+    ./client read.txt
 Server sees that the shared memory was changed, and reads it.
 
-If the text isn't `STOP!!!` then it writes it into write.txt.
+If the text isn't 'STOP!!!' then it writes it into write.txt.
 
-```
 doemac:2 benjamin.horn$ gcc -o server server.c 
 doemac:2 benjamin.horn$ ./server 
 Server: Created shared memory segment
@@ -36,9 +35,8 @@ Server: Detached shared memory
 Server: Removed shared memory
 Server: Done
 doemac:2 benjamin.horn$ 
-```
 
-```
+
 doemac:2 benjamin.horn$ gcc -o client client.c
 doemac:2 benjamin.horn$ ./client read.txt
 Client: Received a shared memory segment.
@@ -48,11 +46,10 @@ Client: Informed server data is waiting.
 Client: Detached shared memory.
 Client: Done.
 doemac:2 benjamin.horn$ 
-```
 
-## Problem 3 Usage
 
-```
+Part 3 Usage -------------------------------------------- DONE
+
 READER ---
 doemac:3 benjamin.horn$ gcc -o read3 read3.c 
 doemac:3 benjamin.horn$ ./read3 
@@ -77,9 +74,7 @@ Output: 5555555555
 Output: 5555555555
 Output: 5555555555
 doemac:3 benjamin.horn$ 
-```
 
-```
 WRITER ---
 doemac:3 benjamin.horn$ gcc -o write3 write3.c 
 doemac:3 benjamin.horn$ ./write3
@@ -89,4 +84,3 @@ doemac:3 benjamin.horn$ ./write3
 doemac:3 benjamin.horn$ ./write3
 ^C
 doemac:3 benjamin.horn$ 
-```
