@@ -1,0 +1,20 @@
+#!/bin/bash
+
+echo Benjamin Horn - OpSys - Assignment 1
+
+if [ $# -ne 1 ]; then
+    echo "Please provide one and only one arguement"
+    exit 1
+fi
+
+fork(){
+    count=0
+    while (($count<=10))
+    do
+      echo "$count"
+      count=$(( count+1 ))
+    done
+}
+
+echo $@
+fork
