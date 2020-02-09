@@ -1,4 +1,4 @@
-# opsys
+# uc-pperating-systems
 University of Cincinnati - Operating Systems
 
 ## Problem 1 Usage
